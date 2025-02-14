@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0a0a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ffffff;
+}
+
+.music-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.7);
+}
+
+.player-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.7);
+}
+
+.player-header h2 {
+    font-size: 1.8em;
+    color: #00aaff;
+    text-shadow: 0 0 10px #00aaff;
+    margin-bottom: 20px;
+}
+
+.controls button {
+    font-size: 2em;
+    background: rgba(0, 170, 255, 0.2);
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.controls button:hover {
+    box-shadow: 0 0 20px rgba(0, 170, 255, 1);
+    transform: scale(1.1);
+}
+
+.progress {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: rgba(0, 170, 255, 0.3);
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.7);
+}
+
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #00aaff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00aaff;
+}
+
+.track-info {
+    margin-top: 20px;
+}
+
+.track-name, .track-artist {
+    font-size: 1.2em;
+    color: #00aaff;
+    text-shadow: 0 0 10px #00aaff;
+}
+.album-art {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.album-art img {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.7);
+    transition: transform 0.3s ease;
+}
+
+/* Rotate while playing */
+.album-art img.playing {
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
